@@ -1,15 +1,4 @@
 
-/***************************  FIREBASE DEPENDENCIES  ***************************/
-const functions = require('firebase-functions'); // required for cloud functions
-const admin = require('firebase-admin'); // admin has database reference in it
-var serviceAccount = require("../serviceAccountKeyTestKult.json"); //it holds configuration to connect to firebase account/database and auth //tells which firebase project to connect to
-// var serviceAccount = require("../serviceAccountKey.json");
-admin.initializeApp({ // initialising the firebase project with certain firebase account cred/detail.
-    credential: admin.credential.cert(serviceAccount),
-    databaseURL: "https://test-kult.firebaseio.com"
-    // databaseURL: "https://kult-2.firebaseio.com",
-}); //firestore is our database
-var firestore = admin.firestore();
 /***************************  FIREBASE DEPENDENCIES ENDS ***************************/
 var async = require('async');
 var moment = require('moment');
